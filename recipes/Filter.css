@@ -83,3 +83,7 @@ dd {
 dd + dd {
   border-top: 1px solid #ccc;
 }
+
+#submit {
+  border-radius: 5px;
+}
