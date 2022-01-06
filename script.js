@@ -1,11 +1,11 @@
-let keyArray = [
-  { name: "q", value: "chicken" },
-  { name: "app_id", value: "8d922c31" },
-  { name: "app_key", value: "af905ade37b309ff4539c4999530672a" },
-];
 let filtArray = [];
 let url = "https://api.edamam.com/api/recipes/v2?type=public";
 let promise, q, i, x;
+let keyArray = [
+  { name: "q", value: q },
+  { name: "app_id", value: "8d922c31" },
+  { name: "app_key", value: "af905ade37b309ff4539c4999530672a" },
+];
 let submit = document.getElementById("submit");
 let ingredientLines;
 
@@ -67,7 +67,7 @@ promise
   })
   .then((data) => {
     console.log(data);
-    i = 0;
+    i = 1;
     htmlFill(i, data);
     return (x = data);
   });
@@ -85,7 +85,7 @@ document.querySelector(".prev").addEventListener("click", () => {
 });
 
 submit.addEventListener("click", () => {
-  if (document.querySelector(".search_field").value !== "") {
+  if (document.querySelector(".search_field").value) {
     q = document.querySelector(".search_field").value;
   }
   keyArray = [
@@ -93,11 +93,11 @@ submit.addEventListener("click", () => {
     { name: "app_id", value: "8d922c31" },
     { name: "app_key", value: "af905ade37b309ff4539c4999530672a" },
   ];
-  if (document.querySelector("#min").value !== "") {
+  if (document.querySelector("#min").value) {
     min = document.querySelector("#min").value;
     console.log(min);
   }
-  if (document.querySelector("#max").value !== "") {
+  if (document.querySelector("#max").value) {
     max = document.querySelector("#max").value;
     console.log(max);
     keyArray.push({ name: "calories", value: `${min}-${max}` });
