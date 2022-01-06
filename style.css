@@ -5,7 +5,7 @@ body {
 .container {
   position: relative;
 }
-button{
+button {
   cursor: pointer;
 }
 .background {
@@ -27,7 +27,6 @@ button{
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-  /* url(image.png);  */
   opacity: 0.32;
   border: 2px solid #98ffff;
   box-sizing: border-box;
@@ -39,34 +38,29 @@ button{
   width: 817px;
   height: 63px;
   right: 0px;
-left: 51px;
-top: 51px;
-bottom: 0px;
--webkit-box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  left: 51px;
+  top: 51px;
+  bottom: 0px;
+  -webkit-box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-border-radius: 15px;
-border: 1px solid #98ffff;
-background: rgb(255, 255, 255);
-overflow: hidden;
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
--webkit-box-pack: center;
--ms-flex-pack: center;
+  border-radius: 15px;
+  border: 1px solid #98ffff;
+  background: rgb(255, 255, 255);
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
--webkit-box-align: center;
--ms-flex-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-border-top: 1px solid rgba(255, 255, 255, 0.5);
-border-left: 1px solid rgba(255, 255, 255, 0.5);
-border-right: 1px solid rgba(255, 255, 255, 0.5);
--webkit-backdrop-filter: blir(5px);
-backdrop-filter: blir(5px);
-  
-  /* background: #ffffff;
-  border: 1px solid #98ff98;
-  box-sizing: border-box;
-  border-radius: 40px; */
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blir(5px);
+  backdrop-filter: blir(5px);
   font-size: large;
 }
 .but_cherry {
@@ -77,12 +71,11 @@ backdrop-filter: blir(5px);
   left: 733px;
   top: 55px;
   border: none;
-  background: rgba(255, 255, 255, 0.493);;
+  background: rgba(255, 255, 255, 0.493);
   cursor: pointer;
 }
 .but_mint_filter {
   position: absolute;
-  /* width: 76px; */
   height: 41px;
   left: 780px;
   border: none;
@@ -101,20 +94,7 @@ ul {
 
 .input {
   width: 130px;
-} 
-
-/* .but_mint_filter {
-  margin-left: 0px;
-  background-color: #4caf50;
-  color: white;
-  padding: 3px;
-  font-size: 14px;
-  border: none;
-  cursor: pointer;
-  min-width: 162px;
-  border-radius: 5px 5px 0px 0px;
-  font-family: Arial, Helvetica, sans-serif;
-} */
+}
 
 .dropbtn:hover,
 .dropbtn:focus {
@@ -127,19 +107,19 @@ ul {
 }
 
 .dropdown-content {
-background-color: #f6f6f6;
- overflow: auto; 
-border: 1px solid #ddd; 
-margin-left: 0px;
-min-width: 368px;
-max-height: 574px;
-right: 0px;
-left: 470px;
-position: absolute; 
-top: 147px;
+  background-color: #f6f6f6;
+  overflow: auto;
+  border: 1px solid #ddd;
+  margin-left: 0px;
+  min-width: 368px;
+  max-height: 574px;
+  right: 0px;
+  left: 470px;
+  position: absolute;
+  top: 147px;
 
-display: none;
-z-index: 10;
+  display: none;
+  z-index: 10;
 }
 
 .show {
@@ -180,7 +160,6 @@ dd + dd {
   border-top: 1px solid #ccc;
 }
 
-
 .recipe_search {
   position: absolute;
   flex-direction: column;
@@ -190,32 +169,26 @@ dd + dd {
   left: 435px;
   -webkit-box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-border-radius: 15px;
-border: 1px solid #98ffff;
-background: rgba(242, 238, 203, 0.493);
-overflow: hidden;
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
--webkit-box-pack: center;
--ms-flex-pack: center;
+  border-radius: 15px;
+  border: 1px solid #98ffff;
+  background: rgba(242, 238, 203, 0.493);
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
--webkit-box-align: center;
--ms-flex-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-border-top: 1px solid rgba(255, 255, 255, 0.5);
-border-left: 1px solid rgba(255, 255, 255, 0.5);
-border-right: 1px solid rgba(255, 255, 255, 0.5);
--webkit-backdrop-filter: blir(5px);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blir(5px);
   backdrop-filter: blir(5px);
-  /* background: #ffffff;
-  border: 1px solid #98ff98;
-  box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
-    inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 40px; */
 }
-.foto_dish  img {
+.foto_dish img {
   position: absolute;
   width: 342px;
   height: 249px;
@@ -238,33 +211,25 @@ border-right: 1px solid rgba(255, 255, 255, 0.5);
   top: 427px;
   -webkit-box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-border-radius: 15px;
-border: 1px solid #98ffff;
-background: rgba(255, 255, 255, 0.493);
-overflow: hidden;
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
--webkit-box-pack: center;
--ms-flex-pack: center;
-  justify-content: center;
--webkit-box-align: center;
--ms-flex-align: center;
-  align-items: center;
-border-top: 1px solid rgba(255, 255, 255, 0.5);
-border-left: 1px solid rgba(255, 255, 255, 0.5);
-border-right: 1px solid rgba(255, 255, 255, 0.5);
--webkit-backdrop-filter: blir(5px);
-  backdrop-filter: blir(5px);
-  /* background: #ffffff;
+  border-radius: 15px;
   border: 1px solid #98ffff;
-  box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 50px; */
-
+  background: rgba(255, 255, 255, 0.493);
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blir(5px);
+  backdrop-filter: blir(5px);
 }
-
-
 
 .line_name_healthLabels {
   position: absolute;
@@ -276,29 +241,24 @@ border-right: 1px solid rgba(255, 255, 255, 0.5);
   top: 510px;
   -webkit-box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-border-radius: 15px;
-border: 1px solid #98ffff;
-background: rgba(255, 255, 255, 0.493);
-overflow: hidden;
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
--webkit-box-pack: center;
--ms-flex-pack: center;
-  justify-content: center;
--webkit-box-align: center;
--ms-flex-align: center;
-  align-items: center;
-border-top: 1px solid rgba(255, 255, 255, 0.5);
-border-left: 1px solid rgba(255, 255, 255, 0.5);
-border-right: 1px solid rgba(255, 255, 255, 0.5);
--webkit-backdrop-filter: blir(5px);
-  backdrop-filter: blir(5px);
-  /* background: #ffffff;
+  border-radius: 15px;
   border: 1px solid #98ffff;
-  box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 50px; */
+  background: rgba(255, 255, 255, 0.493);
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blir(5px);
+  backdrop-filter: blir(5px);
 }
 .line_name_dietLabels {
   position: absolute;
@@ -310,29 +270,24 @@ border-right: 1px solid rgba(255, 255, 255, 0.5);
   left: 57px;
   -webkit-box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-border-radius: 15px;
-border: 1px solid #98ffff;
-background: rgba(255, 255, 255, 0.493);
-overflow: hidden;
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
--webkit-box-pack: center;
--ms-flex-pack: center;
-  justify-content: center;
--webkit-box-align: center;
--ms-flex-align: center;
-  align-items: center;
-border-top: 1px solid rgba(255, 255, 255, 0.5);
-border-left: 1px solid rgba(255, 255, 255, 0.5);
-border-right: 1px solid rgba(255, 255, 255, 0.5);
--webkit-backdrop-filter: blir(5px);
-  backdrop-filter: blir(5px);
-  /* background: #ffffff;
+  border-radius: 15px;
   border: 1px solid #98ffff;
-  box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 50px; */
+  background: rgba(255, 255, 255, 0.493);
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blir(5px);
+  backdrop-filter: blir(5px);
 }
 .line_name_dishType {
   position: absolute;
@@ -344,27 +299,22 @@ border-right: 1px solid rgba(255, 255, 255, 0.5);
   right: 0px;
   -webkit-box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-border-radius: 15px;
-border: 1px solid #98ffff;
-background: rgba(255, 255, 255, 0.493);
-overflow: hidden;
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
--webkit-box-pack: center;
--ms-flex-pack: center;
-  justify-content: center;
--webkit-box-align: center;
--ms-flex-align: center;
-  align-items: center;
-border-top: 1px solid rgba(255, 255, 255, 0.5);
-border-left: 1px solid rgba(255, 255, 255, 0.5);
-border-right: 1px solid rgba(255, 255, 255, 0.5);
--webkit-backdrop-filter: blir(5px);
-  backdrop-filter: blir(5px);
-  /* background: #ffffff;
+  border-radius: 15px;
   border: 1px solid #98ffff;
-  box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 50px; */
+  background: rgba(255, 255, 255, 0.493);
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blir(5px);
+  backdrop-filter: blir(5px);
 }
