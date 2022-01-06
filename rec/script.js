@@ -1,4 +1,8 @@
-let keyArray = [];
+let keyArray = [
+  { name: "q", value: "chicken" },
+  { name: "app_id", value: "8d922c31" },
+  { name: "app_key", value: "af905ade37b309ff4539c4999530672a" },
+];
 let filtArray = [];
 let url = "https://api.edamam.com/api/recipes/v2?type=public";
 let promise, q, i, x;
@@ -55,6 +59,30 @@ function htmlFill(counter, data) {
     ".totalNutrientsd"
   ).innerText = `Cuisine: ${filler.cuisineType}`;
 }
+urlCreation();
+promise = fetch(url);
+promise
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data);
+    i = 0;
+    htmlFill(i, data);
+    return (x = data);
+  });
+document.querySelector(".next").addEventListener("click", () => {
+  if (i < 20) {
+    i++;
+    htmlFill(i, x);
+  }
+});
+document.querySelector(".prev").addEventListener("click", () => {
+  if (i > 0) {
+    i--;
+    htmlFill(i, x);
+  }
+});
 
 submit.addEventListener("click", () => {
   if (document.querySelector(".search_field").value !== "") {
@@ -74,11 +102,8 @@ submit.addEventListener("click", () => {
     console.log(max);
     keyArray.push({ name: "calories", value: `${min}-${max}` });
   }
-  //console.log(filtArray);
   keyArray = keyArray.concat(filtArray);
-  //console.log(keyArray);
   urlCreation();
-  //console.log(url);
   promise = fetch(url);
   promise
     .then((response) => {
@@ -90,20 +115,6 @@ submit.addEventListener("click", () => {
       htmlFill(i, data);
       return (x = data);
     });
-
-  document.querySelector(".next").addEventListener("click", () => {
-    if (i < 20) {
-      i++;
-      htmlFill(i, x);
-    }
-  });
-  document.querySelector(".prev").addEventListener("click", () => {
-    if (i > 0) {
-      i--;
-      htmlFill(i, x);
-    }
-  });
-
   document.querySelector(".search_field").value = "";
   filtArray = [];
   keyArray = [
