@@ -15,8 +15,10 @@ document.addEventListener("change", function () {
   if (chk.checked === true) {
     console.log(chk.name, chk.value, chk.checked);
     filtArray.push({ name: chk.name, value: chk.value });
-  } else {
-    filtArray.splice(chk.checked === false, 1);
+  }
+  if (chk.checked === false) {
+    let index = filtArray.indexOf({ name: chk.name, value: chk.value });
+    filtArray.splice(index);
   }
   console.log(filtArray);
 });
@@ -65,6 +67,11 @@ submit.addEventListener("click", () => {
   }
   //
 
+  keyArray = [
+    { name: "q", value: q },
+    { name: "app_id", value: "8d922c31" },
+    { name: "app_key", value: "af905ade37b309ff4539c4999530672a" },
+  ];
   keyArray = keyArray.concat(filtArray);
   urlCreation();
 
@@ -82,7 +89,6 @@ submit.addEventListener("click", () => {
 
   //очистка
   document.querySelector(".search_field").value = "";
-  filtArray = [];
   keyArray = [
     { name: "q", value: q },
     { name: "app_id", value: "8d922c31" },
