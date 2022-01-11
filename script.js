@@ -1,4 +1,5 @@
 let filtArray = [];
+let chk;
 let url = "https://api.edamam.com/api/recipes/v2?type=public";
 let ingredientLines, promise, q, i, x;
 let keyArray = [
@@ -8,21 +9,6 @@ let keyArray = [
 ];
 let submit = document.getElementById("submit");
 let elementChecked = document.querySelector("input[type=checkbox]");
-
-//фильтр
-document.addEventListener("change", function () {
-  var chk = event.target;
-  if (chk.checked === true) {
-    console.log(chk.name, chk.value, chk.checked);
-    filtArray.push({ name: chk.name, value: chk.value });
-  }
-  if (chk.checked === false) {
-    let index = filtArray.indexOf({ name: chk.name, value: chk.value });
-    filtArray.splice(index);
-  }
-  console.log(filtArray);
-});
-//
 
 urlCreation();
 promise = fetch(url);
@@ -50,6 +36,21 @@ document.querySelector(".prev").addEventListener("click", () => {
   }
 });
 
+//фильтр
+document.addEventListener("change", function (event) {
+  chk = event.target;
+  if (chk.checked === true) {
+    console.log(chk.name, chk.value, chk.checked);
+    obj = { name: chk.name, value: chk.value };
+    filtArray.push(obj);
+  }
+  if (chk.checked === false) {
+    filtArray = filtArray.filter((element) => element.value !== chk.value);
+  }
+  console.log(filtArray);
+});
+//
+
 submit.addEventListener("click", () => {
   if (document.querySelector(".search_field").value) {
     q = document.querySelector(".search_field").value;
@@ -73,6 +74,7 @@ submit.addEventListener("click", () => {
     { name: "app_key", value: "af905ade37b309ff4539c4999530672a" },
   ];
   keyArray = keyArray.concat(filtArray);
+  console.log(keyArray);
   urlCreation();
 
   promise = fetch(url);

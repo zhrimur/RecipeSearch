@@ -45,7 +45,7 @@ button {
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   border: 1px solid #98ffff;
-  background: rgb(255, 255, 255);
+  background: rgb(250, 246, 246);
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -61,6 +61,7 @@ button {
   border-right: 1px solid rgba(255, 255, 255, 0.5);
   -webkit-backdrop-filter: blir(5px);
   backdrop-filter: blir(5px);
+
   font-size: large;
 }
 .but_cherry {
@@ -68,16 +69,50 @@ button {
   width: 36.14px;
   height: 0.47px;
   right: 165.867px;
-  left: 733px;
+  left: 713px;
   top: 55px;
   border: none;
   background: rgba(255, 255, 255, 0.493);
   cursor: pointer;
 }
-.but_mint_filter {
+
+[data-tooltip]::after {
+  content: attr(data-tooltip); /* Выводим текст */
+  position: absolute; /* Абсолютное позиционирование */
+  width: 100px; /* Ширина подсказки */
+  left: 0;
+  top: 0; /* Положение подсказки */
+  background: #3989c9; /* Синий цвет фона */
+  color: #fff; /* Цвет текста */
+  padding: 0.5em; /* Поля вокруг текста */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Параметры тени */
+  pointer-events: none; /* Подсказка */
+  opacity: 0; /* Подсказка невидима */
+  transition: 1s; /* Время появления подсказки */
+  border-radius: 15px;
+}
+[data-tooltip]:hover::after {
+  opacity: 1; /* Показываем подсказку */
+  top: 4.5em; /* Положение подсказки */
+}
+
+.but_filter {
   position: absolute;
+
   height: 41px;
-  left: 780px;
+  left: 769px;
+  border: none;
+  top: 60px;
+  padding: 0;
+  cursor: pointer;
+  background: rgb(250, 246, 246);
+}
+
+.spoons_filter {
+  /* position: relative;  */
+
+  height: 41px;
+  left: 769px;
   border: none;
   top: 60px;
   padding: 0;
@@ -187,6 +222,12 @@ dd + dd {
   border-right: 1px solid rgba(255, 255, 255, 0.5);
   -webkit-backdrop-filter: blir(5px);
   backdrop-filter: blir(5px);
+  /* background: #ffffff;
+  border: 1px solid #98ff98;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 40px; */
 }
 .foto_dish img {
   position: absolute;
@@ -288,6 +329,11 @@ dd + dd {
   border-right: 1px solid rgba(255, 255, 255, 0.5);
   -webkit-backdrop-filter: blir(5px);
   backdrop-filter: blir(5px);
+  /* background: #ffffff;
+  border: 1px solid #98ffff;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50px; */
 }
 .line_name_dishType {
   position: absolute;
@@ -317,4 +363,95 @@ dd + dd {
   border-right: 1px solid rgba(255, 255, 255, 0.5);
   -webkit-backdrop-filter: blir(5px);
   backdrop-filter: blir(5px);
+}
+.prev {
+  position: absolute;
+  border-bottom-width: 0px;
+  border-bottom-style: solid;
+  border-right-width: 0px;
+  border-right-style: solid;
+  border-left-width: 0px;
+  border-left-style: solid;
+  border-top-width: 0px;
+  border-top-style: solid;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  top: 777px;
+  left: 58px;
+  cursor: pointer;
+  background: #51361a;
+}
+
+.foto_spoon_l {
+  /* position: absolute; */
+  border-bottom-width: 0px;
+  border-bottom-style: solid;
+  border-right-width: 0px;
+  border-right-style: solid;
+  border-left-width: 0px;
+  border-left-style: solid;
+  border-top-width: 0px;
+  border-top-style: solid;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  top: 777px;
+  left: 58px;
+  cursor: pointer;
+}
+.next {
+  border-top-width: 0px;
+  border-top-style: solid;
+  border-bottom-width: 0px;
+  border-bottom-style: solid;
+  border-right-width: 0px;
+  border-right-style: solid;
+  padding-right: 0px;
+  border-left-width: 0px;
+  border-left-style: solid;
+  right: 0px;
+  left: 720px;
+  top: 777px;
+  position: absolute;
+  cursor: pointer;
+  background: #51361a;
+}
+
+.foto_spoon_r {
+  border-top-width: 0px;
+  border-top-style: solid;
+  border-bottom-width: 0px;
+  border-bottom-style: solid;
+  border-right-width: 0px;
+  border-right-style: solid;
+  padding-right: 0px;
+  border-left-width: 0px;
+  border-left-style: solid;
+  right: 0px;
+  left: 720px;
+  top: 777px;
+  /* position: absolute; */
+  cursor: pointer;
+}
+[data-tooltip]::after {
+  content: attr(data-tooltip); /* Выводим текст */
+  position: absolute; /* Абсолютное позиционирование */
+  width: 100px; /* Ширина подсказки */
+  left: 0;
+  top: 0; /* Положение подсказки */
+  background: #3989c9; /* Синий цвет фона */
+  color: #fff; /* Цвет текста */
+  padding: 0.5em; /* Поля вокруг текста */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Параметры тени */
+  pointer-events: none; /* Подсказка */
+  opacity: 0; /* Подсказка невидима */
+  transition: 1s; /* Время появления подсказки */
+  border-radius: 15px;
+}
+[data-tooltip]:hover::after {
+  opacity: 1; /* Показываем подсказку */
+  top: 4.5em; /* Положение подсказки */
 }
