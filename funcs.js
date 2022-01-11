@@ -35,7 +35,61 @@ function htmlFill(counter, data) {
   ).innerText = `Cuisine: ${filler.cuisineType}`;
 }
 
-//фильтр
+//показать фильтр
 function showFilter() {
   document.getElementById("myDropdown").classList.toggle("show");
+}
+
+//промис
+function prom() {
+  promise = fetch(url);
+  promise
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+      i = 0;
+      htmlFill(i, data);
+      return (x = data);
+    });
+}
+
+//фильтр
+function filter(event) {
+  chk = event.target;
+  if (chk.checked === true) {
+    console.log(chk.name, chk.value, chk.checked);
+    obj = { name: chk.name, value: chk.value };
+    filtArray.push(obj);
+  }
+  if (chk.checked === false) {
+    filtArray = filtArray.filter((element) => element.value !== chk.value);
+  }
+}
+
+//фильтр калорийности
+function caloriesFilter() {
+  keyArray = keyArray.filter((element) => element.name !== "calories");
+  if (document.querySelector("#min").value) {
+    min = document.querySelector("#min").value;
+  }
+  if (document.querySelector("#max").value) {
+    max = document.querySelector("#max").value;
+    keyArray.push({ name: "calories", value: `${min}-${max}` });
+  }
+}
+
+//кнопки вперед-назад
+function next() {
+  if (i < 20) {
+    i++;
+    htmlFill(i, x);
+  }
+}
+function prev() {
+  if (i > 0) {
+    i--;
+    htmlFill(i, x);
+  }
 }
