@@ -4,11 +4,57 @@ function urlCreation() {
   keyArray.forEach((element) => {
     url += `&${element.name}=${element.value}`;
   });
+  if (q) {
+    urlArray.push(url);
+  }
+}
+
+//промис
+function prom() {
+  promise = fetch(url);
+  promise
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
+      htmlFill(data);
+      if (data._links.next) {
+        urlArray.push(data._links.next.href);
+      }
+      to = data.to;
+      if (to > 20) {
+        to = to - 20;
+      }
+      to--;
+      return (x = data);
+    });
+}
+
+//фильтр
+function filter(event) {
+  chk = event.target;
+  if (chk.checked === true) {
+    console.log(chk.name, chk.value, chk.checked);
+    obj = { name: chk.name, value: chk.value };
+    filtArray.push(obj);
+  }
+  if (chk.checked === false) {
+    filtArray = filtArray.filter((element) => element.value !== chk.value);
+  }
+  filtArray = filtArray.filter((element) => element.name !== "calories");
+  if (document.querySelector("#min").value) {
+    min = document.querySelector("#min").value;
+  }
+  if (document.querySelector("#max").value) {
+    max = document.querySelector("#max").value;
+    filtArray.push({ name: "calories", value: `${min}-${max}` });
+  }
 }
 
 //отрисовка пришедших данных
-function htmlFill(counter, data) {
-  let filler = data.hits[counter].recipe;
+function htmlFill(data) {
+  filler = data.hits[i].recipe;
   document.querySelector(".recipe_name").innerHTML = filler.label;
   ingredientLines = filler.ingredientLines;
   document.querySelector(".ingredients_recipe_list").innerText = "";
@@ -35,61 +81,41 @@ function htmlFill(counter, data) {
   ).innerText = `Cuisine: ${filler.cuisineType}`;
 }
 
-//показать фильтр
-function showFilter() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-
-//промис
-function prom() {
-  promise = fetch(url);
-  promise
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-      console.log(data);
-      i = 0;
-      htmlFill(i, data);
-      return (x = data);
-    });
-}
-
-//фильтр
-function filter(event) {
-  chk = event.target;
-  if (chk.checked === true) {
-    console.log(chk.name, chk.value, chk.checked);
-    obj = { name: chk.name, value: chk.value };
-    filtArray.push(obj);
-  }
-  if (chk.checked === false) {
-    filtArray = filtArray.filter((element) => element.value !== chk.value);
-  }
-}
-
-//фильтр калорийности
-function caloriesFilter() {
-  keyArray = keyArray.filter((element) => element.name !== "calories");
-  if (document.querySelector("#min").value) {
-    min = document.querySelector("#min").value;
-  }
-  if (document.querySelector("#max").value) {
-    max = document.querySelector("#max").value;
-    keyArray.push({ name: "calories", value: `${min}-${max}` });
-  }
-}
-
 //кнопки вперед-назад
 function next() {
-  if (i < 20) {
+  if (i !== to) {
     i++;
-    htmlFill(i, x);
+    htmlFill(x);
+  } else {
+    if (q) {
+      urlCounter++;
+      url = urlArray[urlCounter];
+      prom();
+      htmlFill(x);
+      i = 0;
+    }
   }
 }
 function prev() {
-  if (i > 0) {
+  if (i !== 0) {
     i--;
-    htmlFill(i, x);
+    htmlFill(x);
+  } else {
+    if (urlCounter !== 0) {
+      urlCounter--;
+      url = urlArray[urlCounter];
+      if (urlArray.length > 2) {
+        urlArray.pop();
+        urlArray.pop();
+      }
+      prom();
+      htmlFill(x);
+      i = to;
+    }
   }
+}
+
+//показать фильтр
+function showFilter() {
+  document.getElementById("myDropdown").classList.toggle("show");
 }

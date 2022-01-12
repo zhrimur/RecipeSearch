@@ -1,8 +1,11 @@
 let filtArray = [];
+let urlArray = [];
+let urlCounter = 0;
+let i = 0;
 let promise;
 let chk;
 let url = "https://api.edamam.com/api/recipes/v2?type=public";
-let ingredientLines, q, i, x;
+let ingredientLines, filler, q, x, to;
 let keyArray = [
   { name: "q", value: q },
   { name: "app_id", value: "8d922c31" },
