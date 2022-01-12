@@ -20,10 +20,10 @@ function prom() {
       console.log(data);
       htmlFill(data);
       if (data._links.next) {
-        urlArray.push(data._links.next.href);
+        urlArray[urlCounter + 1] = data._links.next.href;
       }
       to = data.to;
-      if (to > 20) {
+      while (to > 20) {
         to = to - 20;
       }
       to--;
@@ -104,10 +104,6 @@ function prev() {
     if (urlCounter !== 0) {
       urlCounter--;
       url = urlArray[urlCounter];
-      if (urlArray.length > 2) {
-        urlArray.pop();
-        urlArray.pop();
-      }
       prom();
       htmlFill(x);
       i = to;
