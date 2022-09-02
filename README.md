@@ -1,4 +1,4 @@
-# Zhrimur.github.io
+# RecipeSearch
 
 RECIPE SEARCHING APP/ ПРИЛОЖЕНИЕ ДЛЯ ПОИСКА РЕЦЕПТОВ
 
